@@ -1,7 +1,5 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
-import {By} from "@angular/platform-browser";
 import { CalculatorComponent } from './calculator.component';
 
 describe('AppComponent', () => {
@@ -20,7 +18,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(CalculatorComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    let querySelector = compiled.querySelector('h1');
+    const querySelector = compiled.querySelector('h1');
     expect(querySelector.textContent).toContain('Angular Calculator');
   });
 
@@ -28,7 +26,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(CalculatorComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    let querySelector = compiled.querySelector('#x_button');
+    const querySelector = compiled.querySelector('#x_button');
     expect(querySelector.textContent).toContain('x');
     expect(querySelector.classList.contains('btn-warning')).toBe(true);
   });

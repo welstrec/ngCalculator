@@ -30,7 +30,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    let querySelector = compiled.querySelector('h1');
+    const querySelector = compiled.querySelector('h1');
     expect(querySelector.textContent).toContain('Angular Calculator');
   });
 });

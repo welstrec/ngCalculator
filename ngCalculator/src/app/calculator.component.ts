@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class CalculatorComponent {
 
 
-    input: string = '';
-    result: string = '';
+    input = '';
+    result = '';
 
 
     pressNum(num: string) {
