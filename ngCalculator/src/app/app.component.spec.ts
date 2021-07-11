@@ -26,10 +26,11 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('ngCalculator');
   });
 
-  it('should render title', () => {
+  it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('ngCalculator app is running!');
+    const compiled = fixture.debugElement.nativeElement;
+    let querySelector = compiled.querySelector('h1');
+    expect(querySelector.textContent).toContain('Angular Calculator');
   });
 });
